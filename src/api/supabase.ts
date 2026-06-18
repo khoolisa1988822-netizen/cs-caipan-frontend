@@ -1,11 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('请配置 Supabase 环境变量');
-}
+// 硬编码 Supabase 配置（临时方案）
+const supabaseUrl = 'https://cvqimeqsonvkqqxlwwya.supabase.co';
+const supabaseAnonKey = 'sb_publishable_Mb8NCi1fv0h-w8W07m99aw_QeVwh5dC';
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
